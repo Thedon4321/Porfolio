@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-label="AgriNaija image placeholder">
+  <rect width="640" height="360" fill="#121A2B"/>
+  <rect x="24" y="24" width="592" height="312" rx="16" fill="#182338" stroke="#243049"/>
+  <text x="320" y="175" text-anchor="middle" fill="#2DD4BF" font-family="Segoe UI, system-ui, sans-serif" font-size="28" font-weight="700">AgriNaija</text>
+  <text x="320" y="215" text-anchor="middle" fill="#9AA8C0" font-family="Segoe UI, system-ui, sans-serif" font-size="16">Screenshot placeholder</text>
+</svg>

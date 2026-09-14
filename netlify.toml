@@ -1,0 +1,24 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Pin Node via host UI or .nvmrc when using Netlify's Node version feature.
+[build.environment]
+  NODE_VERSION = "22"
+
+# SPA fallback for React Router (/projects/:slug, 404)
+# Existing files in publish dir (robots.txt, sitemap.xml, assets) are served first.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+
+# Recommended baseline headers (docs/DEPLOYMENT.md §7)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    X-Frame-Options = "DENY"

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /styleguide
+Disallow: /404
+
+# Set VITE_SITE_URL at build time to emit: Sitemap: {origin}/sitemap.xml
