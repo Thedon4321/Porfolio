@@ -69,20 +69,14 @@ Phase 11 is **not fully complete**: contact form delivery is still unconfigured,
 
 ## SEO (production)
 
-Verified on current live deploy (before `VITE_SITE_URL` rebuild):
+Verified after `VITE_SITE_URL` deploy (`f6970f1`):
 
 | Check | Result |
 | --- | --- |
 | Document title | Pass — name + Junior Developer |
-| `/robots.txt` | Reachable (placeholder Sitemap comment until rebuild) |
-| `/sitemap.xml` | Reachable (empty locs until rebuild) |
-| Absolute canonical / OG URL | Absent on current deploy (expected without `VITE_SITE_URL`) |
-
-After this commit’s Netlify rebuild, expect:
-
-- `Sitemap: https://triumphudoportfolio.netlify.app/sitemap.xml`
-- Absolute `<loc>` for `/` and `/projects/agrinaija`
-- Absolute canonical / OG URLs in the app head
+| `/robots.txt` | Pass — includes `Sitemap: https://triumphudoportfolio.netlify.app/sitemap.xml` |
+| `/sitemap.xml` | Pass — absolute locs for `/` and `/projects/agrinaija` |
+| Absolute canonical / OG URL | Pass — populated from `VITE_SITE_URL` |
 
 ---
 
@@ -113,7 +107,7 @@ Manual smoke on live URL: skip link, headings, nav, contact labels present. Full
 | HTTPS | **Pass** |
 | AgriNaija case study route | **Pass** |
 | Contact delivery | **Fail / blocked** — provider unset |
-| `VITE_SITE_URL` in host build | **Configured** in `netlify.toml` (awaiting deploy of this commit) |
+| `VITE_SITE_URL` in host build | **Pass** — live sitemap/robots/canonical use production origin |
 | FarmLink / DevHub in `src/` | Clean |
 
 ---
@@ -125,7 +119,7 @@ Manual smoke on live URL: skip link, headings, nav, contact labels present. Full
 3. Resume/CV optional TODO  
 4. Live Lighthouse not recorded  
 5. Custom domain optional (Netlify subdomain is fine for now)  
-6. Re-verify absolute SEO tags after the deploy that includes `VITE_SITE_URL`
+6. Optional custom domain later (swap `VITE_SITE_URL` when ready)
 
 ---
 
