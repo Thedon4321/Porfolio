@@ -12,7 +12,7 @@ The portfolio is **deployed and reachable over HTTPS** at:
 
 Owner identity content is live. Netlify build config pins Node 20 and `VITE_SITE_URL`. SPA routing, robots, and sitemap work after the next deploy that includes this commit.
 
-Phase 11 is **not fully complete**: contact form delivery is still unconfigured, LinkedIn/resume are optional TODOs, and a live Lighthouse pass has not been recorded yet.
+Phase 11 is **not fully complete**: contact form delivery is still unconfigured, and LinkedIn/resume are optional TODOs. Live Lighthouse (via PageSpeed Insights) is recorded below.
 
 ---
 
@@ -82,20 +82,20 @@ Verified after `VITE_SITE_URL` deploy (`f6970f1`):
 
 ## Accessibility (production smoke)
 
-Manual smoke on live URL: skip link, headings, nav, contact labels present. Full live a11y audit / Lighthouse not recorded in this pass.
+Manual smoke on live URL: skip link, headings, nav, contact labels present. Live accessibility category score recorded with Lighthouse below (100).
 
 ---
 
 ## Lighthouse (production)
 
-**Not run** against the live URL in this pass. Local Phase 10 reference only:
+**Source:** [PageSpeed Insights](https://pagespeed.web.dev/analysis/https-triumphudoportfolio-netlify-app/ddt2h3tm88) (Lighthouse), 2026-09-16 — URL `https://triumphudoportfolio.netlify.app/`
 
-| Category | Local Phase 10 |
-| --- | --- |
-| Performance | 86 |
-| Accessibility | 100 |
-| Best Practices | 100 |
-| SEO | 100 |
+| Category | Mobile | Desktop |
+| --- | --- | --- |
+| Performance | 90 | 99 |
+| Accessibility | 100 | 100 |
+| Best Practices | 100 | 100 |
+| SEO | 100 | 100 |
 
 ---
 
@@ -117,15 +117,13 @@ Manual smoke on live URL: skip link, headings, nav, contact labels present. Full
 1. Contact provider not configured — no production delivery test  
 2. LinkedIn URL optional TODO  
 3. Resume/CV optional TODO  
-4. Live Lighthouse not recorded  
-5. Custom domain optional (Netlify subdomain is fine for now)  
-6. Optional custom domain later (swap `VITE_SITE_URL` when ready)
+4. Custom domain optional (Netlify subdomain is fine for now; swap `VITE_SITE_URL` when ready)
 
 ---
 
 ## Launch decision
 
-**Public URL is live**, but **not ready to call Phase 11 complete** until contact delivery is configured (and ideally SEO re-checked + live Lighthouse).
+**Public URL is live** with production SEO and live Lighthouse scores recorded. Still **not ready to call Phase 11 complete** until contact delivery is configured.
 
 Status: **`PARTIAL — LIVE SITE UP; CONTACT + LAUNCH GAPS REMAIN`**.
 
