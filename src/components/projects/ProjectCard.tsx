@@ -36,7 +36,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       >
         <img
           src={project.image}
-          alt=""
+          alt={`${project.name} preview`}
           width={640}
           height={360}
           className="media-zoom aspect-video w-full object-cover md:h-full md:min-h-48 md:object-cover"

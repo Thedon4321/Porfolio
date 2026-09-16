@@ -11,8 +11,8 @@ export function Footer() {
   return (
     <footer className="border-t border-[var(--color-border)] py-[var(--space-8)]">
       <Container className="flex flex-col gap-6 text-sm text-[var(--color-text-muted)] sm:flex-row sm:items-start sm:justify-between">
-        <div className="space-y-2">
-          <p className="font-semibold text-[var(--color-text)]">{brand}</p>
+        <div className="min-w-0 space-y-2">
+          <p className="truncate font-semibold text-[var(--color-text)]">{brand}</p>
           <p>© {year}. All rights reserved.</p>
         </div>
 

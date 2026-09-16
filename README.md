@@ -5,10 +5,11 @@
 **Status**
 
 - Phases 0–10 — Complete (Phase 10 with documented waivers)
-- Phase 11 — Production readiness **blocked** on owner identity, contact env, domain/hosting (see [`docs/PHASE-11.md`](./docs/PHASE-11.md))
-- Phase 12 — Not started
+- Phase 11 — Live on Netlify; see [`docs/PHASE-11.md`](./docs/PHASE-11.md) (contact delivery test may still be pending)
+- Phase 12 — Final polish complete — see [`docs/PHASE-12.md`](./docs/PHASE-12.md)
+- Phase 13 — Not started
 
-This is a tested local portfolio application. It is **not** a public live site until Phase 11 blockers are cleared.
+Live site: https://triumphudoportfolio.netlify.app/
 
 ---
 
@@ -111,4 +112,4 @@ See [docs/DEPLOYMENT.md](./docs/DEPLOYMENT.md) and [docs/PHASE-11.md](./docs/PHA
 
 ## Next steps
 
-Clear Phase 11 blockers (identity, contact provider, domain/HTTPS, `VITE_SITE_URL`), deploy, then run production smoke + live Lighthouse. Do not start Phase 12 until Phase 11 is evaluated complete.
+Optional: confirm Netlify Forms email delivery; add AgriNaija links/content when available; custom domain later. Do not invent missing project facts.

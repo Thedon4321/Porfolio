@@ -113,6 +113,12 @@ export function buildHomeJsonLd(): Record<string, unknown>[] {
     image: absoluteUrl(profile.photo),
     email: hasContent(profile.email) ? profile.email : undefined,
     sameAs: sameAs.length > 0 ? sameAs : undefined,
+    address: hasContent(profile.location)
+      ? {
+          '@type': 'PostalAddress',
+          addressLocality: profile.location,
+        }
+      : undefined,
   };
 
   // Strip undefined keys

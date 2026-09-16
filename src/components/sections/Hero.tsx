@@ -23,28 +23,30 @@ export function Hero() {
         <div>
           <h1
             id="hero-heading"
-            className="hero-enter text-display-4xl max-w-3xl font-bold tracking-tight text-[var(--color-text)]"
+            className="hero-enter text-display-4xl max-w-3xl break-words font-bold tracking-tight text-[var(--color-text)] text-balance"
           >
             {profile.name}
           </h1>
 
-          <p className="hero-enter hero-enter-delay-1 mt-4 text-xl font-medium text-[var(--color-text-muted)] sm:text-2xl">
+          <p className="hero-enter hero-enter-delay-1 mt-3 text-xl font-medium text-[var(--color-text-muted)] sm:mt-4 sm:text-2xl">
             {profile.title}
           </p>
 
-          <p className="hero-enter hero-enter-delay-2 prose-measure mt-5 text-lg text-[var(--color-text-muted)]">
+          <p className="hero-enter hero-enter-delay-2 prose-measure mt-4 text-base text-[var(--color-text-muted)] text-pretty sm:mt-5 sm:text-lg">
             {profile.shortBio}
           </p>
 
-          <div className="hero-enter hero-enter-delay-3 mt-8 flex flex-wrap gap-3">
-            <Button href="#projects">View projects</Button>
-            <Button href="#contact" variant="secondary">
+          <div className="hero-enter hero-enter-delay-3 mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
+            <Button href="#projects" className="w-full sm:w-auto">
+              View projects
+            </Button>
+            <Button href="#contact" variant="secondary" className="w-full sm:w-auto">
               Contact
             </Button>
           </div>
         </div>
 
-        <div className="hero-enter hero-enter-delay-4 relative mx-auto w-full max-w-md lg:mx-0 lg:max-w-none">
+        <div className="hero-enter hero-enter-delay-4 relative mx-auto w-full max-w-xs sm:max-w-md lg:mx-0 lg:max-w-none">
           <div
             className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface-muted)] shadow-[var(--shadow-md)]"
             style={{ aspectRatio: '1 / 1' }}

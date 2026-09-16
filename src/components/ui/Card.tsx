@@ -26,7 +26,7 @@ export function Card({
   return (
     <div
       className={cn(
-        'rounded-[var(--radius-lg)] border p-5',
+        'rounded-[var(--radius-lg)] border p-4 sm:p-5',
         variantClasses[variant],
         className,
       )}

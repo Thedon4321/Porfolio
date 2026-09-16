@@ -33,13 +33,13 @@ export function Navbar() {
     >
       <Container
         className={cn(
-          'flex items-center justify-between gap-4 transition-[height] duration-[var(--duration-normal)] ease-[var(--ease-standard)]',
+          'flex items-center justify-between gap-3 transition-[height] duration-[var(--duration-normal)] ease-[var(--ease-standard)]',
           scrolled ? 'h-14' : 'h-16',
         )}
       >
         <Link
           to="/"
-          className="text-sm font-bold tracking-tight text-[var(--color-text)]"
+          className="min-w-0 flex-1 truncate text-sm font-bold tracking-tight text-[var(--color-text)] md:flex-none md:max-w-[28rem]"
         >
           {brand}
         </Link>
@@ -49,7 +49,7 @@ export function Navbar() {
           <PrimaryNavCTA />
         </nav>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex shrink-0 items-center gap-2 md:hidden">
           <IconButton
             label={mobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileOpen}

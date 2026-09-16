@@ -29,7 +29,7 @@ export function Section({
       ref={reveal ? revealRef : undefined}
       aria-labelledby={ariaLabelledBy}
       className={cn(
-        'py-[var(--space-10)] sm:py-[var(--space-12)] lg:py-[var(--space-16)]',
+        'py-[var(--space-8)] sm:py-[var(--space-10)] lg:py-[var(--space-16)]',
         reveal && 'reveal',
         className,
       )}
