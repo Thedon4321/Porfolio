@@ -4,7 +4,7 @@
 
 # Pin Node via host UI or .nvmrc when using Netlify's Node version feature.
 [build.environment]
-  NODE_VERSION = "22"
+  NODE_VERSION = "20"
 
 # SPA fallback for React Router (/projects/:slug, 404)
 # Existing files in publish dir (robots.txt, sitemap.xml, assets) are served first.
