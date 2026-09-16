@@ -163,8 +163,8 @@ Phase 1 implementation notes: [PHASE-1.md](./PHASE-1.md)
 
 **Status:** Partial — see [PHASE-11.md](./PHASE-11.md).  
 **Live URL:** https://triumphudoportfolio.netlify.app/ (HTTPS + SPA verified).  
-**Remaining:** contact provider credentials; optional LinkedIn/resume. Live Lighthouse recorded (mobile 90/100/100/100; desktop 99/100/100/100).  
-**Verdict:** `PARTIAL — LIVE SITE UP; CONTACT + LAUNCH GAPS REMAIN`. Do **not** start Phase 12.
+**Remaining:** Netlify Forms notification + live delivery test. LinkedIn/resume intentionally omitted. Live Lighthouse recorded (mobile 90/100/100/100; desktop 99/100/100/100).  
+**Verdict:** `PARTIAL — LIVE SITE UP; CONTACT DELIVERY TEST REMAINS`. Do **not** start Phase 12.
 
 ---
 

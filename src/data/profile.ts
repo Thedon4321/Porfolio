@@ -13,8 +13,8 @@ export const profile: Profile = {
   photo: '/images/profile/triumph.jpg',
   email: 'udontatriumphjoegabriel@gmail.com',
   githubUrl: 'https://github.com/Thedon4321',
-  linkedinUrl: undefined, // TODO — LINKEDIN URL REQUIRED
-  resumeUrl: undefined, // TODO — RESUME/CV REQUIRED
+  linkedinUrl: undefined, // Owner skipped — LinkedIn unavailable (age restriction)
+  resumeUrl: undefined, // Owner skipped — no CV yet
   location: 'Port Harcourt, Nigeria',
   availability: 'Always available',
 };
