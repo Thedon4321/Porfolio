@@ -161,10 +161,10 @@ Phase 1 implementation notes: [PHASE-1.md](./PHASE-1.md)
 | **Expected output** | Live portfolio URL |
 | **Acceptance criteria** | HTTPS site live; forms work; sitemap reachable |
 
-**Status:** In progress / **blocked** — see [PHASE-11.md](./PHASE-11.md).  
-**Local progress:** Development Approach section implemented; Netlify headers + Node pin; typecheck/build pass.  
-**Blocked on owner-supplied:** identity content, contact provider credentials, production domain/hosting, `VITE_SITE_URL`. No live URL verified.  
-**Verdict:** `BLOCKED — PRODUCTION DEPENDENCY REMAINS`. Do **not** start Phase 12.
+**Status:** Partial — see [PHASE-11.md](./PHASE-11.md).  
+**Live URL:** https://triumphudoportfolio.netlify.app/ (HTTPS + SPA verified).  
+**Remaining:** contact provider credentials; optional LinkedIn/resume; live Lighthouse; SEO re-check after `VITE_SITE_URL` deploy.  
+**Verdict:** `PARTIAL — LIVE SITE UP; CONTACT + LAUNCH GAPS REMAIN`. Do **not** start Phase 12.
 
 ---
 

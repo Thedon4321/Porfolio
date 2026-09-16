@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "Professional software developer portfolio — Phase 11 blocked on production dependencies",
+  "description": "Professional software developer portfolio — Phase 11 partial (live on Netlify; contact gaps remain)",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
