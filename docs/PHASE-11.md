@@ -1,7 +1,7 @@
 # Phase 11 — Production Readiness & Deployment
 
 **Date:** 2026-09-16  
-**Status:** `PARTIAL — LIVE SITE UP; CONTACT + LAUNCH GAPS REMAIN`  
+**Status:** `PARTIAL — LIVE SITE UP; CONTACT DELIVERY TEST + OPTIONAL LINKS REMAIN`  
 **Phase 12:** Not started
 
 ## Summary
@@ -12,7 +12,7 @@ The portfolio is **deployed and reachable over HTTPS** at:
 
 Owner identity content is live. Netlify build config pins Node 20 and `VITE_SITE_URL`. SPA routing, robots, and sitemap work after the next deploy that includes this commit.
 
-Phase 11 is **not fully complete**: contact form delivery is still unconfigured, and LinkedIn/resume are optional TODOs. Live Lighthouse (via PageSpeed Insights) is recorded below.
+Phase 11 is **not fully complete**: Netlify Forms is wired in build config, but form notification + a live delivery test still need owner confirmation. LinkedIn/resume remain optional TODOs. Live Lighthouse is recorded below.
 
 ---
 
@@ -34,11 +34,11 @@ Phase 11 is **not fully complete**: contact form delivery is still unconfigured,
 
 | Item | State |
 | --- | --- |
-| Architecture | Unchanged — endpoint / netlify / unconfigured |
-| Production credentials | **Not supplied** |
-| Live UI | Shows safe unconfigured message + mailto fallback |
-| Live delivery test | **BLOCKED — production contact provider not configured** |
-| Netlify Forms stub | Present in `index.html` for when `VITE_CONTACT_PROVIDER=netlify` |
+| Architecture | Netlify Forms mode enabled in `netlify.toml` (`VITE_CONTACT_PROVIDER=netlify`) |
+| Production credentials | None required for Netlify Forms; **form notification email** must be set in Netlify UI |
+| Live UI | After deploy of this setting: form should submit (no “unconfigured” banner) |
+| Live delivery test | **Pending owner** — confirm Netlify form notification + send a test message |
+| Netlify Forms stub | Present in `index.html` (`form-name=portfolio-contact`) |
 
 ---
 
@@ -47,9 +47,9 @@ Phase 11 is **not fully complete**: contact form delivery is still unconfigured,
 | Variable | Required for | Notes |
 | --- | --- | --- |
 | `VITE_SITE_URL` | Absolute canonical, OG, sitemap locs | Set in `netlify.toml` → `https://triumphudoportfolio.netlify.app` |
-| `VITE_CONTACT_PROVIDER` | Contact mode | Still unset |
-| `VITE_CONTACT_FORM_ENDPOINT` | Endpoint mode | Still unset |
-| `VITE_CONTACT_ACCESS_KEY` | Optional | Still unset |
+| `VITE_CONTACT_PROVIDER` | Contact mode | **`netlify`** (set in `netlify.toml`) |
+| `VITE_CONTACT_FORM_ENDPOINT` | Endpoint mode | Unused while on Netlify Forms |
+| `VITE_CONTACT_ACCESS_KEY` | Optional | Unused while on Netlify Forms |
 
 ---
 
@@ -106,7 +106,7 @@ Manual smoke on live URL: skip link, headings, nav, contact labels present. Live
 | Live homepage | **Pass** |
 | HTTPS | **Pass** |
 | AgriNaija case study route | **Pass** |
-| Contact delivery | **Fail / blocked** — provider unset |
+| Contact delivery | **Pending** — Netlify Forms enabled in build; owner must set notification email + send test |
 | `VITE_SITE_URL` in host build | **Pass** — live sitemap/robots/canonical use production origin |
 | FarmLink / DevHub in `src/` | Clean |
 
@@ -114,7 +114,7 @@ Manual smoke on live URL: skip link, headings, nav, contact labels present. Live
 
 ## Known limitations / remaining blockers
 
-1. Contact provider not configured — no production delivery test  
+1. Netlify Forms notification email not confirmed by owner (delivery untested)  
 2. LinkedIn URL optional TODO  
 3. Resume/CV optional TODO  
 4. Custom domain optional (Netlify subdomain is fine for now; swap `VITE_SITE_URL` when ready)
@@ -123,8 +123,8 @@ Manual smoke on live URL: skip link, headings, nav, contact labels present. Live
 
 ## Launch decision
 
-**Public URL is live** with production SEO and live Lighthouse scores recorded. Still **not ready to call Phase 11 complete** until contact delivery is configured.
+**Public URL is live** with production SEO and live Lighthouse scores recorded. Contact uses **Netlify Forms** after the `VITE_CONTACT_PROVIDER=netlify` deploy; Phase 11 still needs an owner-confirmed delivery test (and optional LinkedIn/resume).
 
-Status: **`PARTIAL — LIVE SITE UP; CONTACT + LAUNCH GAPS REMAIN`**.
+Status: **`PARTIAL — LIVE SITE UP; CONTACT DELIVERY TEST + OPTIONAL LINKS REMAIN`**.
 
 **Phase 12 must not be started.**

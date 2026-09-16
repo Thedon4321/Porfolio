@@ -6,6 +6,7 @@
 [build.environment]
   NODE_VERSION = "20"
   VITE_SITE_URL = "https://triumphudoportfolio.netlify.app"
+  VITE_CONTACT_PROVIDER = "netlify"
 
 # SPA fallback for React Router (/projects/:slug, 404)
 # Existing files in publish dir (robots.txt, sitemap.xml, assets) are served first.
