@@ -101,123 +101,31 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
         </DetailBlock>
       ) : null}
 
-      <DetailBlock title="Features">
-        {project.features.length > 0 ? (
-          <ul className="list-disc space-y-1 pl-5">
-            {project.features.map((feature) => (
-              <li key={feature}>{feature}</li>
-            ))}
-          </ul>
-        ) : (
-          <p>TODO — KEY FEATURES REQUIRED</p>
-        )}
-      </DetailBlock>
+        <DetailBlock title="Links">
+  <ul className="flex flex-wrap items-center gap-4">
+    <li>
+      <a
+        href="https://agrinaija.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-medium"
+      >
+        AgriNaija link
+      </a>
+    </li>
 
-      <DetailBlock title="Technology stack">
-        {project.technologies.length > 0 ? (
-          <ul className="flex flex-wrap gap-2" aria-label="Technologies">
-            {project.technologies.map((tech) => (
-              <li key={tech}>
-                <Badge>{tech}</Badge>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>TODO — TECH STACK REQUIRED</p>
-        )}
-      </DetailBlock>
-
-      {project.architectureSummary ||
-      (project.architectureLayers && project.architectureLayers.length > 0) ? (
-        <DetailBlock title="Architecture">
-          {project.architectureSummary ? (
-            <p className="prose-measure font-mono text-sm text-[var(--color-text)]">
-              {project.architectureSummary}
-            </p>
-          ) : null}
-          {project.architectureLayers && project.architectureLayers.length > 0 ? (
-            <ol className="mt-4 list-decimal space-y-2 pl-5">
-              {project.architectureLayers.map((layer) => (
-                <li key={layer.name}>
-                  <span className="font-medium text-[var(--color-text)]">
-                    {layer.name}
-                  </span>
-                  {layer.description ? (
-                    <span>
-                      {' '}
-                      — {layer.description}
-                    </span>
-                  ) : null}
-                </li>
-              ))}
-            </ol>
-          ) : null}
-        </DetailBlock>
+    <li>
+      {hasExternalUrl(project.githubUrl) ? (
+        <ExternalLink href={project.githubUrl} className="font-medium">
+          GitHub
+        </ExternalLink>
       ) : (
-        <DetailBlock title="Architecture">
-          <p>TODO — ARCHITECTURE REQUIRED</p>
-        </DetailBlock>
+        <span className="text-sm">TODO — GITHUB URL REQUIRED</span>
       )}
-
-      <DetailBlock title="Role">
-        {project.role != null ? (
-          <p className="prose-measure whitespace-pre-line">{project.role}</p>
-        ) : (
-          <p>TODO — INFORMATION REQUIRED</p>
-        )}
-      </DetailBlock>
-
-      <DetailBlock title="Deployment">
-        {project.deployment != null ? (
-          <p className="prose-measure whitespace-pre-line">{project.deployment}</p>
-        ) : (
-          <p>TODO — INFORMATION REQUIRED</p>
-        )}
-      </DetailBlock>
-
-      {project.challenges != null && project.challenges.length > 0 ? (
-        <DetailBlock title="Challenges">
-          <ul className="list-disc space-y-1 pl-5">
-            {project.challenges.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </DetailBlock>
-      ) : null}
-
-      {project.results != null && project.results.length > 0 ? (
-        <DetailBlock title="Results">
-          <ul className="list-disc space-y-1 pl-5">
-            {project.results.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </DetailBlock>
-      ) : null}
-
-      <DetailBlock title="Links">
-        <ul className="flex flex-wrap items-center gap-4">
-          <li>
-            {hasExternalUrl(project.liveUrl) ? (
-              <ExternalLink href={project.liveUrl} className="font-medium">
-                Live site
-              </ExternalLink>
-            ) : (
-              <span className="text-sm">TODO — LIVE URL REQUIRED</span>
-            )}
-          </li>
-          <li>
-            {hasExternalUrl(project.githubUrl) ? (
-              <ExternalLink href={project.githubUrl} className="font-medium">
-                GitHub
-              </ExternalLink>
-            ) : (
-              <span className="text-sm">TODO — GITHUB URL REQUIRED</span>
-            )}
-          </li>
-        </ul>
-      </DetailBlock>
-
+    </li>
+  </ul>
+</DetailBlock>      
+      
       <div className="mt-12 flex flex-wrap gap-3">
         <Button href="/#contact">Contact about this project</Button>
         <Button href="/#projects" variant="secondary">
